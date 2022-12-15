@@ -2,8 +2,8 @@
   margin: 0px;
   padding: 0px;
   font-family: Roboto, "system-ui", sans-serif;
-  font-size: 12px;
-  font-weight: 600;
+  /* font-size: 12px;
+  font-weight: 600; */
 }
 
 /* ------------------Navigation bar start -------------------*/
@@ -27,16 +27,9 @@
   left: 0;
 }
 
-input[type="text"] {
-  border: none;
-  width: 70%;
-  border-radius: 20px 0px 0px 20px;
-  padding: 5px;
-  outline: none;
-  margin-top: 29px;
-  font-weight: 300;
-  overflow-wrap: break-word;
+
 }
+
 
 button[type="submit"] {
   background-color: rgb(255, 254, 254);
