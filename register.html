@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
-#logo>img {
+       #logo>img {
   width: 50%;
   margin-top: 20px;
   margin-left: 20px;
@@ -190,11 +189,9 @@ hr {
 }
 
 /* ------------------footer end-------------------*/
-
      </style>
 </head>
 <body>
-
     <div id="container">
         <div class="nav">
             <div id="logo"><img src="image\logo.jpg" alt=""></div>
@@ -227,19 +224,23 @@ hr {
 
 
 
+
     <div id="form">
-        <h2>Login/Register</h2>
+        <h2>Register</h2>
         <hr>
-        <input type="text" name="" id="mob" placeholder="Enter Your Number" >
+        <input type="text" name="" id="f" placeholder="First Name">
+        <input type="text" name="" id="l" placeholder="Last Name">
+        <input type="text" name="" id="mail" placeholder="Email Address">
+        <input type="text" name="" id="mob" placeholder="Enter Your Number">
+        <p>Your mobile number will be used to avail benefits such as Jio Mart Cashback and ROne Loyality Points and receive quick notifications.</p>
         <button onclick="my()">Proceed </button>
     </div>
 
 
 
+      <!-- footer start -->
 
-     <!-- footer start -->
-
-     <footer>
+      <footer>
     
 
 
@@ -364,22 +365,19 @@ hr {
 
     <!-- footer ends -->
 
-
+    
 </body>
 </html>
 <script>
-    function my(){
-        let no=document.querySelector("#mob").value;
-        let storedNo = localStorage.getItem("num");
-
-        if(storedNo==no)
-        {
-            window.location.href=""; 
-        }
-        else{
-            let no=document.querySelector("#mob").value;
-            localStorage.setItem("num",no);
-           window.location.href="register.html"; 
-        }
-    }
+    let no=localStorage.getItem("num");
+    document.querySelector("#mob").value=no;
+function my()
+{
+    
+    let fName=document.querySelector("#f").value;
+    let email=document.querySelector("#mail").value;
+    localStorage.setItem("fName",fName);
+    localStorage.setItem("email",email);
+    window.location.href="";
+}
 </script>
