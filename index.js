@@ -15,8 +15,8 @@ productContainers.forEach((item, i) => {
   });
 });
 
-let prev = document.getElementById("prev");
-let next = document.getElementById("next");
+let prev = document.querySelector(".prev");
+let next = document.querySelector(".next");
 let arr = ["sliderimage/1.webp", "sliderimage/2.webp"];
 let arr2 = [
   "Secondsliderimage/1.webp",
@@ -35,18 +35,18 @@ next.addEventListener("click", function () {
   if (i > arr.length - 1) {
     i = 0;
   }
-  document.getElementById("image").src = arr[i];
+  document.querySelector(".Sliderimage").src = arr[i];
 });
 prev.addEventListener("click", function () {
   i--;
   if (i < 0) {
     i = arr.length - 1;
   }
-  document.getElementById("image").src = arr[i];
+  document.querySelector(".Sliderimage").src = arr[i];
 });
 
 function slides() {
-  document.getElementById("image").src = arr[i];
+   document.querySelector(".Sliderimage").src = arr[i];
   if (i < arr.length - 1) {
     i++;
   } else {
