@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reliance Digital</title>
+    <link rel="icon" type="image/x-icon" href="image/WhatsApp Image 2022-12-14 at 11.38.14.jpeg">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        #main_rendering_page {
+            display: flex;
+            margin-top: 2%;
+            gap: 2%;
+        }
+
+        #filtering_div {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: auto;
+            width: 25%;
+            height: 500px;
+            gap: 2%;
+        }
+
+        #filtering_div>div {
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            background-color: white;
+            padding-left: 5%;
+            padding-top: 5%;
+        }
+
+        #filtering_div>div>div {
+            display: flex;
+            
+        }
+
+        #filtering_div>div>div {
+            width: 90%;
+            margin: auto;
+            align-items: center;
+            margin-top: 2%;
+        }
+
+        .limit_price>input {
+            height: 50px;
+            width: 50%;
+        }
+
+        #sort_and_render {
+            width: 100%;
+        }
+
+        #sorting_div {
+            margin-right: 0%;
+            margin-left: 70%;
+        }
+
+        #sorting_div>div {
+            display: flex;
+            gap: 2%;
+            align-items: center;
+        }
+
+        #sorting_div>div>button {
+            padding: 1px 5px;
+            border-radius: 6px;
+            border: none;
+            background-color: whitesmoke;
+            cursor: pointer;
+        }
+
+        #sorting_div>div>div {
+            display: flex;
+        }
+
+        #sorting_div>div>div>img {
+            width: 30px;
+            height: 30px;
+            border: 1px solid black;
+            padding: 1%;
+            cursor: pointer;
+        }
+
+        #api_rendering_div {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            gap: 2%;
+            width: 100%;
+            margin-top: 5%;
+        }
+
+        #api_rendering_div>div {
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            background-color: white;
+            cursor: pointer;
+            text-align: center;
+
+        }
+
+        #api_rendering_div>div:hover {
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+
+        #api_rendering_div>div>img {
+            width: 80%;
+        }
+
+        #api_rendering_div>div>img:hover {
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            border-radius: 20px;
+        }
+
+        #api_rendering_div>div>p,
+        #api_rendering_div>div>h4 {
+            text-align: left;
+            padding-left: 6%;
+        }
+
+        #api_rendering_div>div>p:nth-child(4) {
+            font-size: 12px;
+            border-color: #AACBA8;
+            background-color: #EFFCF5;
+            color: #61A061;
+        }
+
+        #api_rendering_div>div>button {
+            width: 100%;
+            height: 15%;
+            background-color: #E42529;
+            color: white;
+            border: none;
+            margin-top: 2%;
+            cursor: pointer;
+        }
+        #api_rendering_div>div>button:hover{
+            background-color: #ffffff;
+            color: black;
+            transition: 2ms;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="nav">
+            <div id="logo"><img src="image\logo.jpg" alt=""></div>
+            <div id="searchBar">
+                <form>
+                    <input type="text" placeholder="Find your favorite products" name="search" />
+
+                    <button type="submit" class="submit">Search</button>
+                </form>
+            </div>
+
+            <div class="restOption">
+                <div>
+                    <a href="#"> <img src="image\map.png" alt="location">Find a store</a>
+                    <a href="buyingGuides.html">Buying guides</a>
+                    <a href="contact.html">Contact us</a>
+                </div>
+                <div>
+                    <a href="#">Select your PIN Code</a>
+                    <a href="cart.html">
+                        <div></div><img src="image\cart.png" alt="cart">Cart
+                    </a>
+                    <a href="login.html"><img src="image\account.png" alt="user">Login</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rendering the API -->
+        <div id="main_rendering_page">
+            <div id="filtering_div">
+                <div>
+                    <h3>FILTERS</h3>
+                </div>
+                <!-- <div>
+                    <h4>Price</h4>
+                    <div>
+                        <div class="limit_price">
+                            <input type="text" id="minimum_price">
+                            <label for="" placeholder="">Min.</label>
+                        </div>
+                        <span>to</span>
+                        <div class="limit_price">
+                            <input type="text" id="maximum_price">
+                            <label for="" placeholder="">Max.</label>
+                        </div>
+                    </div>
+                </div> -->
+                <div>
+                    <h4>Availability</h4>
+                    <div>
+                        <input type="checkbox" checked>
+                        <p>Exclude out of Stock</p>
+                    </div>
+                </div>
+                <div>
+                    <h4>Category</h4>
+                    <div>
+                        <input type="checkbox">
+                        <p>Sports & Fitness Watches</p>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <p>Wearable Technology</p>
+                    </div>
+                </div>
+                <div>
+                    <h4>Brand</h4>
+                    <div>
+                        <input type="checkbox">
+                        <p>Fire-Bolt</p>
+                    </div>
+                    <div>
+                        <input type="checkbox">
+                        <p>boAt</p>
+                    </div>
+                </div>
+            </div>
+            <div id="sort_and_render">
+                <div id="sorting_div">
+                    <div>
+                        <label for="">Sort By:</label>
+                        <button>Price(Low-High)</button>
+                        <button>Price(High-Low)</button>
+                        <div>
+                            <img src="image/list.png" alt="block">
+                            <img src="image/grid.png" alt="grid">
+                        </div>
+                    </div>
+                </div>
+                <div id="api_rendering_div">
+                    <!-- Render your Api hear -->
+                    <!-- <div>
+                        <img src="" alt="">
+                        <p></p>
+                        <h4>&#8377;</h4>
+                        <button>OFFERS Available</button>
+                        <button>Add To Cart</button>
+                    </div> -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    let out = [];
+    async function FetchedAllData() {
+        try {
+            let api_data = await fetch("https://63996f3916b0fdad773c979e.mockapi.io/products", {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+            let data = await api_data.json()
+            out = data;
+            displayCards(data);
+            console.log(data)
+        } catch (error) {
+            alert("something went wrong.")
+        }
+    }
+    FetchedAllData();
+
+
+    function displayCards(data) {
+        let container = document.querySelector("#api_rendering_div");
+        container.innerHTML = "";
+        data.forEach(element => {
+            let div = document.createElement("div");
+
+            let img = document.createElement("img");
+            img.setAttribute("src", element.avatar);
+            let discription = document.createElement("p");
+            let str = element.discription
+            discription.innerText = `${str.substring(0, 50)}...`;
+            let price = document.createElement("h4");
+            price.innerHTML = `<h4>&#8377; ${element.price}</h4>`;
+            let offer = document.createElement("p");
+            offer.innerText = "OFFER AVAILABLE";
+            let cart_btn = document.createElement("button");
+            cart_btn.innerText = "Add To Cart";
+
+            div.append(img, discription, price, offer, cart_btn);
+            document.querySelector("#api_rendering_div").append(div);
+        });
+
+    }
+</script>
