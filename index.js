@@ -1,4 +1,3 @@
-
 let prev = document.getElementById("prev");
 let next = document.getElementById("next");
 let arr = ["sliderimage/1.webp", "sliderimage/2.webp"];
@@ -29,9 +28,7 @@ function slides() {
 }
 setInterval(slides, 3000);
 
-
 // --------------------------------------------------------second slider banner starts js -------------------------------------------------
-
 
 let prev1 = document.getElementById("prev1");
 let next1 = document.getElementById("next1");
@@ -75,6 +72,28 @@ setInterval(slides2, 3000);
 
 // ---------------------------------------------------second slider banner ends---------------------------------------
 
+//https://63996f3916b0fdad773c979e.mockapi.io/products?filter=Headphone
+// https://63996f3916b0fdad773c979e.mockapi.io/products
 
 
 
+let searchedInput = document.getElementById("searchInput");
+
+let serachBtn = document.querySelector("#searchBar form");
+serachBtn.addEventListener("submit", (event) => {
+  event.preventDefault();
+ 
+  console.log(searchedInput.value);
+  searchedData(searchInput);
+});
+
+async function searchedData(searchedInput) {
+  let data = await fetch(
+    `https://63996f3916b0fdad773c979e.mockapi.io/products?filter=${searchedInput.value}`
+  );
+  console.log(data);
+  let renderedData = await data.json();
+  console.log(renderedData)
+  sessionStorage.setItem("searchedData", JSON.stringify(renderedData));
+  window.location.href = "searchedProduct.html";
+}
