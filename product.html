@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: Roboto, "system-ui", sans-serif;
+        }
+        #midCont{
+            width: 100%;
+            height: 600px;
+            display: flex;
+            justify-content: space-between;
+        }
+        #midL{
+            width: 40%;
+            text-align: center;
+        }
+        #midR{
+            width: 58%;
+            /* border: 1px solid red; */
+        }
+        #head{
+            width: 100%;
+            height: 28%;
+        }
+        #body{
+            display: flex;
+            justify-content: space-between;
+            height: 75%;
+        }
+        #dis{
+            width: 50%;
+            height: 96%;
+        }
+        #price{
+            width: 49%;
+            height: 96%;
+            /* border: 1px solid red; */
+        }
+        #midL>img{
+            width: 60%;
+           margin-top: 60px;
+        }
+        #price>div{
+            width: 100%;
+            /* border: 1px solid red; */
+            height: 15%;
+        }
+        #price>div{
+            display: flex;
+        }
+        #pin{
+            width: 50%;
+            height: 30px;
+            font-weight: bold;
+        }
+        #check{
+            width: 70px;
+            height: 36px;
+            color: white;
+            background-color: #e42529;
+            border: 0px;
+            font-size: large;
+            font-weight: bold;
+            border-radius: 3px;
+        }
+        #cartbutton{
+            width: 48%;
+            height: 50px;
+            color: white;
+            background-color: #e42529;
+            border: 0px;
+            font-size: larger;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        #buybutton{
+            width: 48%;
+            height: 50px;
+            color: white;
+            background-color:#fc6027;
+            border: 0px;
+            font-size: larger;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        button:hover{
+                cursor: pointer;
+        }
+        #cartbutton:hover{
+            background-color: #003380;
+        }
+        #check:hover{
+            background-color: #003380;
+        }
+        #cb{
+            justify-content: space-between;
+        }
+        #price>div>p{
+            font-size: larger;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="midCont">
+            <div id="midL">
+                <img src="https://www.reliancedigital.in/medias/Ambrane-Wise-Spirit-Smart-watch-492850573-i-1-1200Wx1200H?context=bWFzdGVyfGltYWdlc3w5MjMyMnxpbWFnZS9qcGVnfGltYWdlcy9oMDkvaGE1Lzk4NDIwOTc1ODYyMDYuanBnfGYxZThhZTQ3N2I4ZDk5NjRlZWM4NDkzNDM4NTBjMjUyNzQwYmYxZDBlMjc4OWUzZTQ4MzllNjgxNGJiZjEwYjA" alt="">
+            </div>
+            <div id="midR">
+                <div id="head">
+                    <p id="articleId">Article ID: 492850573</p>
+                    <h2 id="title">Ambrane Wise Spirit Smart Watch with Bluetooth Calling 4.29 cm (1.69 Inch) Lucid Display, 60 Plus Sports Modes, 24x7 Health Monitor, Built-in Speaker and Mic</h2>
+                    <hr>
+                </div>
+                
+                <div id="body">
+                    <div id="dis">
+                        <h3>Key Features</h3>
+                        <p id="discription">
+                            </p>
+                            <h3>Warranty</h3>
+                            <p>1 Year manufacturer warrenty</p>
+                            <h3>return policy</h3>
+                            <p>Items are eligible for return within 7 days of Delivery.</p>
+                    </div>
+                    <div id="price">
+                        <div>
+                            <p>Deal Price: </p>
+                            <p></p>
+                        </div>
+                        <div>
+                            <p>MRP</p>
+                            <p></p>
+                        </div>
+                            <p>You Save 9%</p>
+                            <h3>FREE SHIPING</h3>
+                            <div>
+                                <input type="text" placeholder="Enter PIN CODE" id="pin">
+                                <button id="check">check </button>
+                            </div>
+                            <p>COD Avialable</p>
+                        <div id="cb">
+                            <button id="cartbutton">ADD TO CART</button>
+                            <button id="buybutton">BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+</html>
