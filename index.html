@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html  lang="en">
 
 <head>
     <meta charset="UTF-8" />
@@ -16,13 +16,13 @@
 
 </head>
 
-<body>
+<body id="top" >
     <div id="container">
         <div class="nav">
-            <div id="logo"><img src="image\logo.jpg" alt=""></div>
+            <div id="logo"> <a href="index.html"> <img src="image\logo.jpg" alt=""></a></div>
             <div id="searchBar">
                 <form>
-                    <input type="text" placeholder="Find your favorite products" name="search" />
+                    <input type="text" id="searchInput" placeholder="Find your favorite products" name="search" />
 
 
 
@@ -34,7 +34,7 @@
                 <div>
                     <a href="#"> <img src="image\map.png" alt="location">Find a store</a>
                     <a href="buyingGuides.html">Buying guides</a>
-                    <a href="contact.html">Contact us</a>
+                    <a href="#footer">Contact us</a>
                 </div>
                 <div>
                     <a href="#">Select your PIN Code</a>
@@ -51,11 +51,12 @@
 
         <!--------------------------- 1st-slider bar start for Banner ---------------->
 
+
         <div class="slider">
             <a id="prev">&#10094</a>
             <img id="image" src="sliderimage\1.webp" alt="image">
             <a id="next">&#10095</a>
-                   
+        
 
         </div>
 
@@ -67,9 +68,9 @@
         <!--------------------------- 2nd-slider bar start for Banner ---------------->
         <div class="slider1">
             <a id="prev1">&#10094</a>
-            <img id="image1" src="sliderimage\1.webp" alt="image">
+            <img id="image1" src="Secondsliderimage\1.webp" alt="image">
             <a id="next1">&#10095</a>
-                   
+        
         </div>
 
 
@@ -818,21 +819,21 @@
 
 
 
-
+<!-- 
 
 
                     <li><a href="#">Product Reviews</a></li>
                     <li><a href="#">Buying Guides</a></li>
                     <li><a href="#">How Tos</a></li>
                     <li><a href="#">Featured Stories</a></li>
-                    <li><a href="#">Event & Happenings</a></li>
+                    <li><a href="#">Event & Happenings</a></li> -->
 
 
 
           
+</div>
 
 
-    </div>
 <!--   the end -->
 
         <!-- footer start -->
@@ -927,7 +928,11 @@
                         <div>
                             <img src="" alt="">
                         </div>
-            
+            <div id="footorlogo" >
+                <a href="#top">          <img 
+                src="image\logoFooter.jpg" alt="logo"></a>
+      
+            </div>
             
                     </div>
                       
@@ -948,11 +953,11 @@
             
             </div>
             
-            <div  id="bottom">
+            <div id="bottom">
                 <p>Disclaimer</p>
                 <p>Product prices, offers and availability are subject to change from time to time. All prices are inclusive of taxes. Product colours & images are only for illustration and they may not exactly match with the actual product. Product specs are subject to change & may vary from actual product. While every care is taken to avoid inaccuracies in content, these are provided as is, without warranty of any kind.</p>
               
-            <hr>
+            <hr >
             <p> © 2022 Reliance Digital. All Rights Reserved.</p>
             
             </div>
@@ -978,9 +983,9 @@
 
 
 <script>var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 5,
-        spaceBetween: 20,
-        slidesPerGroup: 5,
+        slidesPerView: 4,
+         spaceBetween: 50,
+        slidesPerGroup: 4,
         loop: true,
         loopFillGroupWithBlank: true,
         pagination: {
