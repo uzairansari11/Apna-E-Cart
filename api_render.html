@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reliance Digital</title>
-    <link rel="icon" type="image/x-icon" href="image/WhatsApp Image 2022-12-14 at 11.38.14.jpeg">
+    <link rel="icon" type="image/x-icon" href="image/WhatsApp Image 2022-12-16 at 13.38.58.jpeg">
     <link rel="stylesheet" href="index.css">
     <style>
         #main_rendering_page {
@@ -29,11 +29,12 @@
             background-color: white;
             padding-left: 5%;
             padding-top: 5%;
+            padding-bottom: 5%;
         }
 
         #filtering_div>div>div {
             display: flex;
-            
+
         }
 
         #filtering_div>div>div {
@@ -43,43 +44,21 @@
             margin-top: 2%;
         }
 
-        .limit_price>input {
-            height: 50px;
-            width: 50%;
-        }
-
         #sort_and_render {
             width: 100%;
         }
 
         #sorting_div {
-            margin-right: 0%;
-            margin-left: 70%;
-        }
-
-        #sorting_div>div {
             display: flex;
-            gap: 2%;
+            justify-content: space-between;
             align-items: center;
         }
 
         #sorting_div>div>button {
-            padding: 1px 5px;
+            padding: 5px 10px;
             border-radius: 6px;
             border: none;
-            background-color: whitesmoke;
-            cursor: pointer;
-        }
-
-        #sorting_div>div>div {
-            display: flex;
-        }
-
-        #sorting_div>div>div>img {
-            width: 30px;
-            height: 30px;
-            border: 1px solid black;
-            padding: 1%;
+            background-color: #F5F7F7;
             cursor: pointer;
         }
 
@@ -89,7 +68,7 @@
             grid-template-rows: auto;
             gap: 2%;
             width: 100%;
-            margin-top: 5%;
+
         }
 
         #api_rendering_div>div {
@@ -97,6 +76,7 @@
             background-color: white;
             cursor: pointer;
             text-align: center;
+            margin-top: 15%;
 
         }
 
@@ -135,7 +115,8 @@
             margin-top: 2%;
             cursor: pointer;
         }
-        #api_rendering_div>div>button:hover{
+
+        #api_rendering_div>div>button:hover {
             background-color: #ffffff;
             color: black;
             transition: 2ms;
@@ -198,39 +179,60 @@
                         <p>Exclude out of Stock</p>
                     </div>
                 </div>
-                <div>
+                <div id="category">
                     <h4>Category</h4>
-                    <div>
+                    <div class="category">
                         <input type="checkbox">
-                        <p>Sports & Fitness Watches</p>
+                        <p>Laptop</p>
                     </div>
-                    <div>
+                    <div class="category">
                         <input type="checkbox">
-                        <p>Wearable Technology</p>
+                        <p>Mobile</p>
+                    </div>
+                    <div class="category">
+                        <input type="checkbox">
+                        <p>Tv</p>
+                    </div>
+                    <div class="category">
+                        <input type="checkbox">
+                        <p>Watch</p>
+                    </div>
+                    <div class="category">
+                        <input type="checkbox">
+                        <p>Camera</p>
+                    </div>
+                    <div class="category">
+                        <input type="checkbox">
+                        <p>Headphone</p>
                     </div>
                 </div>
-                <div>
+                <div id="brands">
                     <h4>Brand</h4>
-                    <div>
-                        <input type="checkbox">
-                        <p>Fire-Bolt</p>
-                    </div>
-                    <div>
-                        <input type="checkbox">
-                        <p>boAt</p>
+                    <div style="display: block;">
+                        <!-- <div style="display: flex;">
+                            <input type="checkbox">
+                            <p>Fire-Bolt</p>
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <p>boAt</p>
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <p>boAt</p>
+                        </div> -->
                     </div>
                 </div>
             </div>
             <div id="sort_and_render">
                 <div id="sorting_div">
                     <div>
+                        <h1>Latest <span>Laptop</span>'s :-</h1>
+                    </div>
+                    <div>
                         <label for="">Sort By:</label>
-                        <button>Price(Low-High)</button>
-                        <button>Price(High-Low)</button>
-                        <div>
-                            <img src="image/list.png" alt="block">
-                            <img src="image/grid.png" alt="grid">
-                        </div>
+                        <button id="LTH">Price(Low-High)</button>
+                        <button id="HTL">Price(High-Low)</button>
                     </div>
                 </div>
                 <div id="api_rendering_div">
@@ -252,7 +254,7 @@
 
 </html>
 <script>
-    let out = [];
+    // Fetching All data.......
     async function FetchedAllData() {
         try {
             let api_data = await fetch("https://63996f3916b0fdad773c979e.mockapi.io/products", {
@@ -261,22 +263,103 @@
                     "Content-Type": "application/json"
                 }
             });
-            let data = await api_data.json()
-            out = data;
-            displayCards(data);
-            console.log(data)
+            let data = await api_data.json();
+            filterByCategory(data);
         } catch (error) {
             alert("something went wrong.")
         }
     }
     FetchedAllData();
 
+    // selecting category type data and filtering...
+    let checked_category = "Mobile";
+    let category_checkbox = document.querySelectorAll("#category>div>p");
+    let data_according_category = [];
+    let bag = ""
+    for (let i = 0; i <= category_checkbox.length - 1; i++) {
+        if (checked_category === category_checkbox[i].innerText) {
+            let commit_change = document.querySelector(`#category>div:nth-child(${i + 2})`);
+            commit_change.innerHTML = `
+                <div class="category" style= "display:flex">
+                    <input type="checkbox" checked>
+                    <p>${checked_category}</p>
+                </div>
+            `
+        }
+    }
 
+    function filterByCategory(data) {
+        let selected = checked_category;
+        let filteredData = data.filter(function (element) {
+            return element.category == selected;
+        });
+        data_according_category = filteredData;
+        brand(data_according_category);
+        displayCards(filteredData);
+    }
+
+    // fetching Brands...
+    let brands = [];
+    function brand(data_according_category) {
+        let arr = [];
+        for (let i = 0; i <= data_according_category.length - 1; i++) {
+            if (arr.length === 0) {
+                arr.push(data_according_category[i].brand);
+            } else if (arr[arr.length - 1] === data_according_category[i].brand) {
+                continue;
+            } else {
+                arr.push(data_according_category[i].brand);
+            }
+        }
+        display_brands(arr);
+    }
+    function display_brands(arr) {
+        document.querySelector("#brands>div").innerHTML = ""
+        document.querySelector("#brands>div").innerHTML = arr.map(element => {
+            return `
+            <div style="display: flex;">
+                <input type="checkbox" id="checked">
+                <p>${element}</p>
+            </div>
+            `
+        }).join(" ");
+        // filter data by brands...
+        let all_brands_ckeckboxes = document.querySelectorAll("#checked")
+        for (let btn_check of all_brands_ckeckboxes) {
+            btn_check.addEventListener("change", (event) => {
+                let filter_by_this = event.target.parentElement.children[1].innerText;
+                filter_by_brands(filter_by_this)
+            });
+        }
+    }
+
+    //filter data by brands...
+    let filteredData_by_brand = [];
+    function filter_by_brands(filter_by_this) {
+        console.log(filter_by_this)
+        let selected = filter_by_this;
+        filteredData_int = data_according_category.filter(function (element) {
+            return element.brand == selected;
+        });
+        filteredData_int.map((element) => {
+            filteredData_by_brand.push(element);
+        });
+        displayCards(filteredData_by_brand);
+        bag = filteredData_by_brand;
+    }
+
+
+
+    // display all our data...
+    let cartItems = JSON.parse(localStorage.getItem("apan_e-store_cartproduct")) || [];
     function displayCards(data) {
         let container = document.querySelector("#api_rendering_div");
         container.innerHTML = "";
         data.forEach(element => {
             let div = document.createElement("div");
+            div.addEventListener("click", function () {
+                localStorage.setItem("product_details", JSON.stringify(element))
+            });
 
             let img = document.createElement("img");
             img.setAttribute("src", element.avatar);
@@ -289,10 +372,47 @@
             offer.innerText = "OFFER AVAILABLE";
             let cart_btn = document.createElement("button");
             cart_btn.innerText = "Add To Cart";
+            cart_btn.addEventListener("click", function () {
+                if (cartItems.includes(element)) {
+                    alert("Already Existing Item in Cart")
+                } else {
+                    cartItems.push(element);
+                    localStorage.setItem("apan_e-store_cartproduct", JSON.stringify(cartItems));
+                }
 
+            })
             div.append(img, discription, price, offer, cart_btn);
             document.querySelector("#api_rendering_div").append(div);
         });
-
     }
+
+
+
+    // sort the displayed data...
+    let lth_btn = document.querySelector("#LTH")
+    lth_btn.addEventListener("click", sort_price_by_LTH)
+    function sort_price_by_LTH() {
+        let selected = document.querySelector("#LTH").id;
+        if (bag === "") {
+            let sortedData = data_according_category.sort((a, b) => a.price - b.price);
+            displayCards(sortedData);
+        } else if (bag !== []) {
+            let sortedData = bag.sort((a, b) => a.price - b.price);
+            displayCards(sortedData);
+        }
+    }
+
+    let htl_btn = document.querySelector("#HTL")
+    htl_btn.addEventListener("click", sort_price_by_HTL)
+    function sort_price_by_HTL() {
+        let selected = document.querySelector("#HTL").id;
+        if (bag === "") {
+            let sortedData = data_according_category.sort((a, b) => b.price - a.price);
+            displayCards(sortedData);
+        } else if (bag !== []) {
+            let sortedData = bag.sort((a, b) => b.price - a.price);
+            displayCards(sortedData);
+        }
+    }
+
 </script>
