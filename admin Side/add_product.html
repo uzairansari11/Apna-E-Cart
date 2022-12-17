@@ -1,85 +1,87 @@
 <!DOCTYPE html>
 <!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
 <html lang="en" dir="ltr">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <!--<title> Responsiive Admin Dashboard | CodingLab </title>-->
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="admin.css" />
     <!-- Boxicons CDN Link -->
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Add Product</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-        #form>form>input {
-            margin: auto;
-            width: 90%;
-            border-radius: 5px;
-            border: 0ch;
-            padding-left: 15px;
-            margin-top: 30px;
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 16px;
-            padding: 5%;
-            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
-                rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-        }
+      #form > form > input {
+        margin: auto;
+        width: 90%;
+        border-radius: 5px;
+        border: 0ch;
+        padding-left: 15px;
+        margin-top: 30px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        padding: 5%;
+        box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+          rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+      }
 
-        form>input:nth-child(7) {
-            background-color: red;
-            height: 60px;
-            width: 40%;
-            color: white;
-            font-weight: 600;
-            margin: auto;
-        }
+      form > input:last-child {
+        background-color: red;
+        height: 60px;
+        width: 40%;
+        color: white;
+        font-weight: 600;
+        margin: auto;
+      }
 
-        form>input:nth-child(7):hover {
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-                rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-            background-color: #2f248b;
-            color: rgb(255, 255, 255);
-        }
-        .sales-details {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: auto;
-            width: 100%;
-            gap: 0 2%;
+      form > input:last-child:hover {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        background-color: #2f248b;
+        color: rgb(255, 255, 255);
+      }
+      .sales-details {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        width: 100%;
+        gap: 0 2%;
+      }
 
-        }
+      .sales-details > div {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        background-color: white;
+        cursor: pointer;
+        text-align: center;
+        margin-top: 15%;
+      }
 
-        .sales-details>div {
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            background-color: white;
-            cursor: pointer;
-            text-align: center;
-            margin-top: 15%;
+      .sales-details > div:hover {
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      }
 
-        }
+      .sales-details > div > img {
+        width: 80%;
+      }
 
-        .sales-details>div:hover {
-            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-        }
+      .sales-details > div > img:hover {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        border-radius: 20px;
+      }
 
-        .sales-details>div>img {
-            width: 80%;
-        }
-
-        .sales-details>div>img:hover {
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-            border-radius: 20px;
-        }
-
-        .sales-details>div>p,
-        .sales-details>div>h4 {
-            text-align: left;
-            padding-left: 6%;
-        }
+      .sales-details > div > p,
+      .sales-details > div > h4 {
+        text-align: left;
+        padding-left: 6%;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="sidebar">
+
         <div class="logo-details">
             <!-- logo -->
             <span class="logo_name">APNA E-STORE</span>
@@ -128,158 +130,245 @@
                 </a>
             </li>
         </ul>
+
     </div>
     <section class="home-section">
-        <nav>
-            <div class="sidebar-button">
-                <i class='bx bx-menu sidebarBtn'></i>
-                <span class="dashboard">Add Product</span>
-            </div>
-            <!-- <div class="search-box">
+      <nav>
+        <div class="sidebar-button">
+          <i class="bx bx-menu sidebarBtn"></i>
+          <span class="dashboard">Add Product</span>
+        </div>
+        <!-- <div class="search-box">
                 <input type="text" placeholder="Search...">
                 <i class='bx bx-search'></i>
             </div> -->
-            <div class="profile-details">
-                <img src="images/profile.jpg" alt="">
-                <!-- admin name -->
-                <span class="admin_name">Hey Himanshu</span>
-                <i class='bx bx-chevron-down'></i>
-            </div>
-        </nav>
-
-        <div class="home-content">
-            <div class="overview-boxes">
-                <div class="box">
-                    <div class="right-side">
-                        <div class="box-topic">Total Items</div>
-                        <div class="number">47</div>
-                        <div class="indicator">
-                            <i class='bx bx-up-arrow-alt'></i>
-                            <span class="text">Up from yesterday</span>
-                        </div>
-                    </div>
-                    <i class='bx bx-cart-alt cart'></i>
-                </div>
-                <div class="box">
-                    <div class="right-side">
-                        <div class="box-topic">Newly Add</div>
-                        <div class="number">0</div>
-                        <div class="indicator">
-                            <i class='bx bx-up-arrow-alt'></i>
-                            <span class="text">Up from yesterday</span>
-                        </div>
-                    </div>
-                    <i class='bx bxs-cart-add cart two'></i>
-                </div>
-                <div class="box">
-                    <div class="right-side">
-                        <div class="box-topic">Total Remove</div>
-                        <div class="number">0</div>
-                        <div class="indicator">
-                            <i class='bx bx-up-arrow-alt'></i>
-                            <span class="text">Up from yesterday</span>
-                        </div>
-                    </div>
-                    <i class='bx bx-cart cart three'></i>
-                </div>
-                <div class="box">
-                    <div class="right-side">
-                        <div class="box-topic">Deleted Items</div>
-                        <div class="number">0</div>
-                        <div class="indicator">
-                            <i class='bx bx-down-arrow-alt down'></i>
-                            <span class="text">Down From Today</span>
-                        </div>
-                    </div>
-                    <i class='bx bxs-cart-download cart four'></i>
-                </div>
-            </div>
-
-            <div class="sales-boxes">
-                <div class="recent-sales box">
-                    <div class="title">Fetch Updated Data list</div>
-                    <div class="sales-details">
-                        <!-- Fetch Updated Data -->
-                    </div>
-                </div>
-                <div class="top-sales box" style="height: 725px;">
-                    <div class="title">Add Item</div>
-                    <div id="form">
-                        <form>
-                            <input type="mail" id="updateId" placeholder="Product ID"/>
-                            <input type="text" id="updateDes" placeholder="Enter Title" />
-                            <input type="text" id="updatePrice" placeholder="Enter Description" />
-                            <input type="number" id="updatePrev" placeholder="Enter price" />
-                            <input type="text" id="updateImg" placeholder="Enter Avatar URL" />
-                            <p style="color: black; margin-top: 35px">
-                                Note: Product details will get updated in the site, make sure
-                                before updating details.
-                            </p>
-                            <input style="font-size: 18px; width: 94%" type="button" id="updateBtn"
-                                value="Update Product" />
-                        </form>
-                    </div>
-                </div>
-            </div>
+        <div class="profile-details">
+          <img src="images/profile.jpg" alt="" />
+          <!-- admin name -->
+          <span class="admin_name">Hey Himanshu</span>
+          <i class="bx bx-chevron-down"></i>
         </div>
+      </nav>
+
+      <div class="home-content">
+        <div class="overview-boxes">
+          <div class="box">
+            <div class="right-side">
+              <div class="box-topic">Total Items</div>
+              <div class="number">47</div>
+              <div class="indicator">
+                <i class="bx bx-up-arrow-alt"></i>
+                <span class="text">Up from yesterday</span>
+              </div>
+            </div>
+            <i class="bx bx-cart-alt cart"></i>
+          </div>
+          <div class="box">
+            <div class="right-side">
+              <div class="box-topic">Newly Add</div>
+              <div class="number">0</div>
+              <div class="indicator">
+                <i class="bx bx-up-arrow-alt"></i>
+                <span class="text">Up from yesterday</span>
+              </div>
+            </div>
+            <i class="bx bxs-cart-add cart two"></i>
+          </div>
+          <div class="box">
+            <div class="right-side">
+              <div class="box-topic">Total Remove</div>
+              <div class="number">0</div>
+              <div class="indicator">
+                <i class="bx bx-up-arrow-alt"></i>
+                <span class="text">Up from yesterday</span>
+              </div>
+            </div>
+            <i class="bx bx-cart cart three"></i>
+          </div>
+          <div class="box">
+            <div class="right-side">
+              <div class="box-topic">Deleted Items</div>
+              <div class="number">0</div>
+              <div class="indicator">
+                <i class="bx bx-down-arrow-alt down"></i>
+                <span class="text">Down From Today</span>
+              </div>
+            </div>
+            <i class="bx bxs-cart-download cart four"></i>
+          </div>
+        </div>
+
+        <div class="sales-boxes">
+          <div class="recent-sales box">
+            <div class="title">Fetch Updated Data list</div>
+            <div class="sales-details">
+              <!-- Fetch Updated Data -->
+            </div>
+          </div>
+          <div class="top-sales box" style="height: 760px">
+            <div class="title">Add Item</div>
+            <div id="form">
+              <form>
+                <input
+                  type="mail"
+                  id="addCategory"
+                  placeholder="Category"
+                  required
+                />
+                <input
+                  type="text"
+                  id="addTitle"
+                  placeholder="Enter Title"
+                  required
+                />
+                <input
+                  type="text"
+                  id="addDescription"
+                  placeholder="Enter Description"
+                  required
+                />
+                <input
+                  type="number"
+                  id="addPrice"
+                  placeholder="Enter price"
+                  required
+                />
+
+                <input
+                  type="text"
+                  id="addBrand"
+                  placeholder="EnterBrand"
+                  required
+                />
+
+
+                <input
+                  type="text"
+                  id="addImage"
+                  placeholder="Enter Avatar URL"
+                  required
+                />
+                <p style="color: black; margin-top: 35px">
+                  Note: Product details will get updated in the site, make sure
+                  before updating details.
+                </p>
+                <input
+                  style="font-size: 18px; width: 94%"
+                  type="button"
+                  id="addBtn"
+                  value="Add Product"
+                />
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <script>
-        let sidebar = document.querySelector(".sidebar");
-        let sidebarBtn = document.querySelector(".sidebarBtn");
-        sidebarBtn.onclick = function () {
-            sidebar.classList.toggle("active");
-            if (sidebar.classList.contains("active")) {
-                sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
-            } else
-                sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
-        }
-
-        let admin_details = document.querySelector(".sales-details");
-        async function Fetch_admin() {
-            try {
-                let api_data = await fetch("https://63996f3916b0fdad773c979e.mockapi.io/products", {
-                    method: "GET",
-                    headers: {
-                        "Content-Type": "application/json"
-                    }
-                });
-                let data = await api_data.json();
-                //console.log(data);
-                displayCards(data);
-            } catch (error) {
-                alert("Can't able to fetch Details of Admin")
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".sidebarBtn");
+      sidebarBtn.onclick = function () {
+        sidebar.classList.toggle("active");
+        if (sidebar.classList.contains("active")) {
+          sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+        } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+      };
+      let globalData;
+      let admin_details = document.querySelector(".sales-details");
+      async function Fetch_admin() {
+        try {
+          let api_data = await fetch(
+            "https://63996f3916b0fdad773c979e.mockapi.io/products",
+            {
+              method: "GET",
+              headers: {
+                "Content-Type": "application/json",
+              },
             }
+          );
+          let data = await api_data.json();
+          //console.log(data);
+          globalData = data;
+          displayCards(data);
+        } catch (error) {
+          alert("Can't able to fetch Details of Admin");
         }
-        Fetch_admin();
+      }
+      Fetch_admin();
 
+      function displayCards(data) {
+        let admin_details = document.querySelector(".sales-details");
+        admin_details.innerHTML = "";
+        data.forEach((element) => {
+          let div = document.createElement("div");
+          div.addEventListener("click", function () {
+            localStorage.setItem("product_details", JSON.stringify(element));
+          });
 
-        function displayCards(data) {
-            let admin_details = document.querySelector(".sales-details");
-            admin_details.innerHTML = "";
-            data.forEach(element => {
-                let div = document.createElement("div");
-                div.addEventListener("click", function () {
-                    localStorage.setItem("product_details", JSON.stringify(element))
-                });
+          let img = document.createElement("img");
+          img.setAttribute("src", element.avatar);
+          let offer = document.createElement("p");
+          let tit = element.title;
+          offer.innerText = `${tit.substring(0, 10)}...`;
+          let discription = document.createElement("p");
+          let str = element.discription;
+          discription.innerText = `${str.substring(0, 20)}...`;
+          let price = document.createElement("h4");
+          price.innerHTML = `<h4>&#8377; ${element.price}</h4>`;
 
-                let img = document.createElement("img");
-                img.setAttribute("src", element.avatar);
-                let offer = document.createElement("p");
-                let tit = element.title;
-                offer.innerText = `${tit.substring(0, 10)}...`;
-                let discription = document.createElement("p");
-                let str = element.discription
-                discription.innerText = `${str.substring(0, 20)}...`;
-                let price = document.createElement("h4");
-                price.innerHTML = `<h4>&#8377; ${element.price}</h4>`;
-               
-                div.append(img, offer, discription, price);
-                document.querySelector(".sales-details").append(div);
-            });
+          div.append(img, offer, discription, price);
+          document.querySelector(".sales-details").append(div);
+        });
+      }
+
+      let productCategory = document.getElementById("addCategory");
+      let productTitle = document.getElementById("addTitle");
+      let productDescription = document.getElementById("addDescription");
+      let productPrice = document.getElementById("addPrice");
+      let image = document.getElementById("addImage");
+      let brand=document.getElementById("addBrand")
+
+      let addButton = document.getElementById("addBtn");
+      addButton.addEventListener("click", (event) => {
+        let obj = {
+          category: productCategory.value,
+          title: productTitle.value,
+          description: productDescription.value,
+          price: productPrice.value,
+          avatar: image.value,
+          brand:brand.value
+        };
+
+        addData(obj);
+      });
+
+      async function addData(obj) {
+        try {
+          let data = await fetch(
+            "https://63996f3916b0fdad773c979e.mockapi.io/products",
+            {
+              method: "POST",
+              headers: {
+                "content-type": "application/json",
+              },
+              body: JSON.stringify(obj),
+            }
+          );
+          if (data.ok) {
+            let addProductData = await data.json();
+
+            alert("Product Added successfully👍");
+window.location.href="add_product.html"
+            // displayCards(globalData);
+          } else {
+            alert("Data cant be added");
+          }
+        } catch (error) {
+          alert(error);
         }
+      }
     </script>
-
-</body>
-
+  </body>
 </html>
