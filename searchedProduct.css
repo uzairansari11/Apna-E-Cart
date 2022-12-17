@@ -1,15 +1,14 @@
 #subcontainer {
   padding: 40px 0px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 2%;
   width: 95%;
   margin: auto;
-height: auto;
+  height: auto;
+  overflow: scroll;
+}
 
- }
-
- 
 #subcontainer > div {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   background-color: white;
@@ -57,10 +56,10 @@ height: auto;
   background-color: #ffffff;
   color: black;
   transition: 2ms;
-} 
-#subcontainer>h1{
-    color:rgb(3, 3, 3);
-    border: 1px solid red;
-    width: 200%;
-    text-align: center;
+}
+#subcontainer > h1 {
+  color: rgb(3, 3, 3);
+  border: 1px solid red;
+  width: 200%;
+  text-align: center;
 }
