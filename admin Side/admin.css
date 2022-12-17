@@ -312,7 +312,7 @@ nav .profile-details i {
 }
 
 .home-content .sales-boxes .sales-details {
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: space-between;
 }
