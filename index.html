@@ -38,7 +38,7 @@
                     <a href="#footer">Contact us</a>
                 </div>
                 <div>
-                    <a href="#">Select your PIN Code</a>
+                    <a href="#" id="name">Select your PIN Code</a>
                     <a href="cart.html">
                         <div></div><img src="image\cart.png" alt="cart">Cart
                     </a>
@@ -1001,8 +1001,9 @@
 
 
 
+    let a=localStorage.getItem("fName");
 
-
+    document.querySelector("#name").innerText="Hi, "+a;
 
 
 
