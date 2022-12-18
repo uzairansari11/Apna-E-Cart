@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,151 +11,163 @@
     <title>Product</title>
 
     <style>
-        *{
+        * {
             font-family: Roboto, "system-ui", sans-serif;
         }
+
         /* ------------------Navigation bar start -------------------*/
 
-#logo > a > img {
-  width: 50%;
-  margin-top: 20px;
-  margin-left: 20px;
-  align-self: center;
-}
+        #logo>a>img {
+            width: 50%;
+            margin-top: 20px;
+            margin-left: 20px;
+            align-self: center;
+        }
 
-.nav {
-  background-color: #e42529;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 5px;
-  width: 100%;
-  position: sticky;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  font-family: Roboto, "system-ui", sans-serif;
-  font-size: 12px;
-  font-weight: 600;
-}
+        .nav {
+            background-color: #e42529;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+            width: 100%;
+            position: sticky;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            font-family: Roboto, "system-ui", sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+        }
 
-#searchBar input[type="text"] {
-  border: none;
-  width: 70%;
-  border-radius: 20px 0px 0px 20px;
-  padding: 7px;
-  outline: none;
-  margin-top: 29px;
-  font-weight: 300;
-  overflow-wrap: break-word;
-}
+        #searchBar input[type="text"] {
+            border: none;
+            width: 70%;
+            border-radius: 20px 0px 0px 20px;
+            padding: 7px;
+            outline: none;
+            margin-top: 29px;
+            font-weight: 300;
+            overflow-wrap: break-word;
+        }
 
-#searchBar input:focus {
-  outline: none;
-  border-color: #6ee3fd;
-  box-shadow: 0 0 10px #fdec6e;
-}
+        #searchBar input:focus {
+            outline: none;
+            border-color: #6ee3fd;
+            box-shadow: 0 0 10px #fdec6e;
+        }
 
-#searchBar button[type="submit"] {
-  background-color: rgb(255, 254, 254);
-  width: 22%;
-  padding: 7px;
-  position: relative;
-  left: -10px;
-  outline: none;
-  border: none;
-  border-radius: 0px 20px 20px 0px;
-  background-color: rgb(170, 166, 166);
-  color: rgb(0, 0, 0);
-}
+        #searchBar button[type="submit"] {
+            background-color: rgb(255, 254, 254);
+            width: 22%;
+            padding: 7px;
+            position: relative;
+            left: -10px;
+            outline: none;
+            border: none;
+            border-radius: 0px 20px 20px 0px;
+            background-color: rgb(170, 166, 166);
+            color: rgb(0, 0, 0);
+        }
 
-#searchBar button[type="submit"]:hover {
-  /* background-color: rgb(255, 183, 0); */
-  color: red;
-  outline: none;
-  border-color: #fdec6e;
-  box-shadow: 0 0 10px #fdec6e;
-}
+        #searchBar button[type="submit"]:hover {
+            /* background-color: rgb(255, 183, 0); */
+            color: red;
+            outline: none;
+            border-color: #fdec6e;
+            box-shadow: 0 0 10px #fdec6e;
+        }
 
-.restOption a {
-  text-decoration: none;
-  color: #feffff;
-  margin-right: 15px;
-  display: block;
-}
+        .restOption a {
+            text-decoration: none;
+            color: #feffff;
+            margin-right: 15px;
+            display: block;
+        }
 
-.restOption a:hover {
-  color: #fdec6e;
-  text-shadow: 0 0 10px #0026ff;
-  -moz-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  -webkit-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
-}
+        .restOption a:hover {
+            color: #fdec6e;
+            text-shadow: 0 0 10px #0026ff;
+            -moz-transition: all 0.2s ease-in;
+            -o-transition: all 0.2s ease-in;
+            -webkit-transition: all 0.2s ease-in;
+            transition: all 0.2s ease-in;
+        }
 
-.restOption > div {
-  display: flex;
-  justify-content: right;
-  margin-bottom: 15px;
-  padding: 5px;
-}
+        .restOption>div {
+            display: flex;
+            justify-content: right;
+            margin-bottom: 15px;
+            padding: 5px;
+        }
 
-.restOption img {
-  width: 13px;
-  margin-right: 5px;
-}
+        .restOption img {
+            width: 13px;
+            margin-right: 5px;
+        }
 
-/* ------------------Navigation bar end -------------------*/
-        #midCont{
+        /* ------------------Navigation bar end -------------------*/
+        #midCont {
             width: 100%;
             height: 600px;
             display: flex;
             justify-content: space-between;
             margin-top: 30px;
         }
-        #midL{
+
+        #midL {
             width: 40%;
             text-align: center;
         }
-        #midR{
+
+        #midR {
             width: 58%;
             /* border: 1px solid red; */
         }
-        #head{
+
+        #head {
             width: 100%;
             height: 28%;
         }
-        #body{
+
+        #body {
             display: flex;
             justify-content: space-between;
             height: 75%;
         }
-        #dis{
+
+        #dis {
             width: 50%;
             height: 96%;
         }
-        #price{
+
+        #price {
             width: 49%;
             height: 96%;
             /* border: 1px solid red; */
         }
-        #midL>img{
+
+        #midL>img {
             width: 60%;
-           margin-top: 60px;
+            margin-top: 60px;
         }
-        #price>div{
+
+        #price>div {
             width: 100%;
             /* border: 1px solid red; */
             height: 15%;
         }
-        #price>div{
+
+        #price>div {
             display: flex;
         }
-        #pin{
+
+        #pin {
             width: 50%;
             height: 30px;
             font-weight: bold;
         }
-        #check{
+
+        #check {
             width: 70px;
             height: 36px;
             color: white;
@@ -164,7 +177,8 @@
             font-weight: bold;
             border-radius: 3px;
         }
-        #cartbutton{
+
+        #cartbutton {
             width: 48%;
             height: 50px;
             color: white;
@@ -174,49 +188,60 @@
             font-weight: bold;
             border-radius: 5px;
         }
-        #buybutton{
+
+        #buybutton {
             width: 48%;
             height: 50px;
             color: white;
-            background-color:#fc6027;
+            background-color: #fc6027;
             border: 0px;
             font-size: larger;
             font-weight: bold;
             border-radius: 5px;
         }
-        button:hover{
-                cursor: pointer;
+
+        button:hover {
+            cursor: pointer;
         }
-        #cartbutton:hover{
+
+        #cartbutton:hover {
             background-color: #003380;
         }
-        #check:hover{
+
+        #check:hover {
             background-color: #003380;
         }
-        #cb{
+
+        #cb {
             justify-content: space-between;
         }
-        #price>div>p{
+
+        #price>div>p {
             font-size: larger;
             margin-right: 10px;
         }
-        #dot{
+
+        #dot {
             color: green;
             font-size: 30px;
             font-weight: bolder;
         }
-        #deal{
+
+        #deal {
             font-weight: bolder;
             color: #003380;
         }
-        #save{
+
+        #save {
             font-weight: bold;
         }
-        #mrp{
+
+        #mrp {
             text-decoration: line-through;
         }
-        #line{
-           border-bottom:1px solid  gray;
+
+        #line {
+            border-bottom: 1px solid gray;
             width: 100%;
             height: 25px;
             /* font-size: smaller; */
@@ -229,329 +254,343 @@
 
         /* ------------------footer start-------------------*/
 
-footer {
-  background-color: #003380;
-}
+        footer {
+            background-color: #003380;
+        }
 
-#footer {
-  display: flex;
-  width: 100%;
-  justify-content: space-around;
-  line-height: 32px;
-  background-color: #003380;
-  color: white;
-  margin-top: 100px;
-  padding: 20px 0px 0px 0px;
+        #footer {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            line-height: 32px;
+            background-color: #003380;
+            color: white;
+            margin-top: 100px;
+            padding: 20px 0px 0px 0px;
 
-}
+        }
 
-#footer ul {
-  list-style-type: none;
-  font-size: medium;
-}
+        #footer ul {
+            list-style-type: none;
+            font-size: medium;
+        }
 
-#footer a {
-  color: white;
-  text-decoration: none;
-  font-weight: 400;
-  font-size: 15px;
-}
+        #footer a {
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 15px;
+        }
 
-#footer a:hover {
-  border-bottom: 1px solid rgb(250, 255, 250);
-}
+        #footer a:hover {
+            border-bottom: 1px solid rgb(250, 255, 250);
+        }
 
-#footerSocial {
-  display: flex;
-  margin: auto;
-  margin-top: 40px;
-  line-height: 30px;
-  width: 95%;
-}
+        #footerSocial {
+            display: flex;
+            margin: auto;
+            margin-top: 40px;
+            line-height: 30px;
+            width: 95%;
+        }
 
-#footerSocial > div:nth-child(1) {
-  width: 30%;
-  padding-left: 40px;
-  color: whitesmoke;
-}
+        #footerSocial>div:nth-child(1) {
+            width: 30%;
+            padding-left: 40px;
+            color: whitesmoke;
+        }
 
-#footerSocial > div:nth-child(2) {
-  width: 70%;
-  color: whitesmoke;
-}
+        #footerSocial>div:nth-child(2) {
+            width: 70%;
+            color: whitesmoke;
+        }
 
-.image-icon {
-  height: 35px;
-  margin-bottom: 20px;
-}
+        .image-icon {
+            height: 35px;
+            margin-bottom: 20px;
+        }
 
-.socialmedialogo {
-  height: 15px;
-  margin-right: 10px;
-}
+        .socialmedialogo {
+            height: 15px;
+            margin-right: 10px;
+        }
 
-#footorlogo > a > img {
-  width: 40%;
-  margin-left: 0px;
-}
+        #footorlogo>a>img {
+            width: 40%;
+            margin-left: 0px;
+        }
 
-#bottom {
-  text-align: center;
-  font-weight: 200;
-  background-color: #0a244a;
-  line-height: 25px;
-  color: rgb(255, 255, 255);
-}
+        #bottom {
+            text-align: center;
+            font-weight: 200;
+            background-color: #0a244a;
+            line-height: 25px;
+            color: rgb(255, 255, 255);
+        }
 
-#bottom > p {
-  width: 90%;
-  margin: auto;
-  padding: 15px;
-  font-family: system-ui;
+        #bottom>p {
+            width: 90%;
+            margin: auto;
+            padding: 15px;
+            font-family: system-ui;
 
-  font-weight: lighter;
-}
+            font-weight: lighter;
+        }
 
-hr {
-  border: none;
-  border-bottom: 1px solid rgb(210, 187, 187);
-}
+        hr {
+            border: none;
+            border-bottom: 1px solid rgb(210, 187, 187);
+        }
 
-/* ------------------footer end-------------------*/
+        /* ------------------footer end-------------------*/
     </style>
 </head>
+
 <body>
     <!-- navbar start -->
-    
-<body id="top" >
-    <div id="container">
-        <div class="nav">
-            <div id="logo"> <a href="index.html"> <img src="image\logo.jpg" alt=""></a></div>
-            <div id="searchBar">
-                <form>
-                    <input type="text" id="searchInput" placeholder="Find your favorite products" name="search" />
+
+    <body id="top">
+        <div id="container">
+            <div class="nav">
+                <div id="logo"> <a href="index.html"> <img src="image\logo.jpg" alt=""></a></div>
+                <div id="searchBar">
+                    <form>
+                        <input type="text" id="searchInput" placeholder="Find your favorite products" name="search" />
 
 
 
-                    <button type="submit" class="submit">Search</button>
-                </form>
+                        <button type="submit" class="submit">Search</button>
+                    </form>
+                </div>
+
+                <div class="restOption">
+                    <div>
+                        <a href="#"> <img src="image\map.png" alt="location">Find a store</a>
+                        <a href="buyingGuides.html">Buying guides</a>
+                        <a href="#footer">Contact us</a>
+                    </div>
+                    <div>
+                        <a href="#">Select your PIN Code</a>
+                        <a href="cart.html">
+                            <div></div><img src="image\cart.png" alt="cart">Cart
+                        </a>
+                        <a href="login.html"><img src="image\account.png" alt="user">Login</a>
+                    </div>
+                </div>
             </div>
 
-            <div class="restOption">
-                <div>
-                    <a href="#"> <img src="image\map.png" alt="location">Find a store</a>
-                    <a href="buyingGuides.html">Buying guides</a>
-                    <a href="#footer">Contact us</a>
+
+
+            <!-- Nav End -->
+
+
+
+
+            <div id="line"></div>
+            <div id="midCont">
+                <div id="midL">
+                    <img id="imgp" src="" alt="">
                 </div>
-                <div>
-                    <a href="#">Select your PIN Code</a>
-                    <a href="cart.html">
-                        <div></div><img src="image\cart.png" alt="cart">Cart
-                    </a>
-                    <a href="login.html"><img src="image\account.png" alt="user">Login</a>
-                </div>
-            </div>
-        </div>
+                <div id="midR">
+                    <div id="head">
+                        <p id="articleId">Article ID: 492850573</p>
+                        <h2 id="title">Ambrane Wise Spirit Smart Watch with Bluetooth Calling 4.29 cm (1.69 Inch) Lucid
+                            Display, 60 Plus Sports Modes, 24x7 Health Monitor, Built-in Speaker and Mic</h2>
+                        <hr>
+                    </div>
 
-
-
-        <!-- Nav End -->
-
-
-
-
-<div id="line"></div>
-    <div id="midCont">
-            <div id="midL">
-                <img id="imgp" src="" alt="">
-            </div>
-            <div id="midR">
-                <div id="head">
-                    <p id="articleId">Article ID: 492850573</p>
-                    <h2 id="title">Ambrane Wise Spirit Smart Watch with Bluetooth Calling 4.29 cm (1.69 Inch) Lucid Display, 60 Plus Sports Modes, 24x7 Health Monitor, Built-in Speaker and Mic</h2>
-                    <hr>
-                </div>
-                
-                <div id="body">
-                    <div id="dis">
-                        <h3>Key Features</h3>
-                        <p id="discription">
+                    <div id="body">
+                        <div id="dis">
+                            <h3>Key Features</h3>
+                            <p id="discription">
                             </p>
                             <h3>Warranty</h3>
                             <p>1 Year manufacturer warrenty</p>
                             <h3>return policy</h3>
                             <p>Items are eligible for return within 7 days of Delivery.</p>
-                    </div>
-                    <div id="price">
-                        <div>
-                            <p>Deal Price: </p>
-                            <p id="deal"></p>
                         </div>
-                        <div>
-                            <p>MRP</p>
-                            <p id="mrp"></p>
-                        </div>
+                        <div id="price">
+                            <div>
+                                <p>Deal Price: </p>
+                                <p id="deal"></p>
+                            </div>
+                            <div>
+                                <p>MRP</p>
+                                <p id="mrp"></p>
+                            </div>
                             <p id="save">You Save 9%</p>
                             <h3>FREE SHIPING</h3>
                             <div>
                                 <input type="text" placeholder="Enter PIN CODE" id="pin">
                                 <button id="check" onclick="check()">check </button>
                             </div>
-                            <p id="dot">  </p>
-                        <div id="cb">
-                            <button id="cartbutton">ADD TO CART</button>
-                            <button id="buybutton">BUY NOW</button>
+                            <p id="dot"> </p>
+                            <div id="cb">
+                                <button id="cartbutton">ADD TO CART</button>
+                                <button id="buybutton">BUY NOW</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-    </div>
 
 
-        
-        <!-- footer start -->
 
-        <footer>
-    
+            <!-- footer start -->
 
+            <footer>
 
 
 
 
 
 
-            <div><div id="footer">
+
+
                 <div>
-                    <ul>PRODUCT CATAGORIES
-            
-                        <li><a href="#">Smartphones</a></li>
-                           <li><a href="#">Laptops</a></li>
-                              <li><a href="#">DSLR Cameras</a></li>
-                                 <li><a href="#">Televisions</a></li>
-                                    <li><a href="#">Air conditioners</a></li>
-                                       <li><a href="#">Refrigerators</a></li>
-                                          <li><a href="#">Kitchen Appliances</a></li>
-                                             <li><a href="#">Accessories</a></li>
-                                                <li><a href="#">Personal Care & Grooming</a></li>
-                    </ul>
-                </div>
-            
-              <div>
-                    <ul>SITE INFO
-            
-                        <li><a href="#">About Reliance Digital</a></li>
-                           <li><a href="#">resQ Services</a></li>
-                              <li><a href="#">Site Map</a></li>
-                                 <li><a href="#">Gift Cards</a></li>
-                                    <li><a href="#">Corporate Enquires</a></li>
-                                       <li><a href="#">Contact Us</a></li>
-                                         
-                    </ul>
-                </div>
-            
-                <div>
-                    <ul>RESOURCE CENTER
-            
-                        <li><a href="#">Product Reviews</a></li>
-                           <li><a href="#">Buying Guides</a></li>
-                              <li><a href="#">How Tos</a></li>
-                                 <li><a href="#">Featured Stories</a></li>
-                                    <li><a href="#">Event & Happenings</a></li>
-                                 
-                                         
-                    </ul>
-                </div>
-            
-                <div>
-                   <ul>POLICIES
-            
-                        <li><a href="#">Terms of use</a></li>
-                           <li><a href="#">Cancellation and Retruns</a></li>
-                              <li><a href="#">Privacy Policy</a></li>
-                                 <li><a href="#">E-waste Policy</a></li>
-                                    <li><a href="#">EMI Terms and Conditions</a></li>
-                               <li><a href="#">Pricing and Payments Policy</a></li>
-                              <li><a href="#">Delivery & Shipping Policy</a></li>
-                                 <li><a href="#">Apna E-Store Maha Cashback T&C</a></li>
-                                     
-                                         
-                    </ul> 
-                </div>
-            
-            </div>
-            
-            
-            
-            
-             <div id="footerSocial">
+                    <div id="footer">
+                        <div>
+                            <ul>PRODUCT CATAGORIES
+
+                                <li><a href="#">Smartphones</a></li>
+                                <li><a href="#">Laptops</a></li>
+                                <li><a href="#">DSLR Cameras</a></li>
+                                <li><a href="#">Televisions</a></li>
+                                <li><a href="#">Air conditioners</a></li>
+                                <li><a href="#">Refrigerators</a></li>
+                                <li><a href="#">Kitchen Appliances</a></li>
+                                <li><a href="#">Accessories</a></li>
+                                <li><a href="#">Personal Care & Grooming</a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <ul>SITE INFO
+
+                                <li><a href="#">About Reliance Digital</a></li>
+                                <li><a href="#">resQ Services</a></li>
+                                <li><a href="#">Site Map</a></li>
+                                <li><a href="#">Gift Cards</a></li>
+                                <li><a href="#">Corporate Enquires</a></li>
+                                <li><a href="#">Contact Us</a></li>
+
+                            </ul>
+                        </div>
+
+                        <div>
+                            <ul>RESOURCE CENTER
+
+                                <li><a href="#">Product Reviews</a></li>
+                                <li><a href="#">Buying Guides</a></li>
+                                <li><a href="#">How Tos</a></li>
+                                <li><a href="#">Featured Stories</a></li>
+                                <li><a href="#">Event & Happenings</a></li>
+
+
+                            </ul>
+                        </div>
+
+                        <div>
+                            <ul>POLICIES
+
+                                <li><a href="#">Terms of use</a></li>
+                                <li><a href="#">Cancellation and Retruns</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">E-waste Policy</a></li>
+                                <li><a href="#">EMI Terms and Conditions</a></li>
+                                <li><a href="#">Pricing and Payments Policy</a></li>
+                                <li><a href="#">Delivery & Shipping Policy</a></li>
+                                <li><a href="#">Apna E-Store Maha Cashback T&C</a></li>
+
+
+                            </ul>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div id="footerSocial">
                         <div>
                             <h4>FOLLOW US</h4>
-                            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE8IpEU3sOxQxNjMw3VAoSWsekRpvgOvjziQ&usqp=CAU" alt="" class="socialmedialogo"></a>
-                            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQuQ1WZVJ3GUDCgjBkdoi29hZKhG2jqSJm2A&usqp=CAU" alt="" class="socialmedialogo"></a>
-                            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS49-2NdYCnhN07iUFqsG_ExFiP3QjH9s9naA&usqp=CAU" alt="" class="socialmedialogo"></a>
-                            </div>
-                          
-                        <div>
-                            <h4>EXPERIENCE RELIANCE DIGITAL APP ON MOBILE</h4> 
-                           <img src="https://www.reliancedigital.in/build/client/images/google_play_store.png" alt="" class="image-icon">
-                           <img src="https://www.reliancedigital.in/build/client/images/ios_app_store_icon.png" alt="" class="image-icon">
+                            <a href="#"><img
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE8IpEU3sOxQxNjMw3VAoSWsekRpvgOvjziQ&usqp=CAU"
+                                    alt="" class="socialmedialogo"></a>
+                            <a href="#"><img
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQuQ1WZVJ3GUDCgjBkdoi29hZKhG2jqSJm2A&usqp=CAU"
+                                    alt="" class="socialmedialogo"></a>
+                            <a href="#"><img
+                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS49-2NdYCnhN07iUFqsG_ExFiP3QjH9s9naA&usqp=CAU"
+                                    alt="" class="socialmedialogo"></a>
                         </div>
-                        
-            
+
+                        <div>
+                            <h4>EXPERIENCE RELIANCE DIGITAL APP ON MOBILE</h4>
+                            <img src="https://www.reliancedigital.in/build/client/images/google_play_store.png" alt=""
+                                class="image-icon">
+                            <img src="https://www.reliancedigital.in/build/client/images/ios_app_store_icon.png" alt=""
+                                class="image-icon">
+                        </div>
+
+
                         <div>
                             <img src="" alt="">
                         </div>
-            <div id="footorlogo" >
-                <a href="#top">          <img 
-                src="image\logoFooter.jpg" alt="logo"></a>
-      
-            </div>
-            
+                        <div id="footorlogo">
+                            <a href="#top"> <img src="image\logoFooter.jpg" alt="logo"></a>
+
+                        </div>
+
                     </div>
-                      
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            </div>
-            
-            <div id="bottom">
-                <p>Disclaimer</p>
-                <p>Product prices, offers and availability are subject to change from time to time. All prices are inclusive of taxes. Product colours & images are only for illustration and they may not exactly match with the actual product. Product specs are subject to change & may vary from actual product. While every care is taken to avoid inaccuracies in content, these are provided as is, without warranty of any kind.</p>
-              
-            <hr >
-            <p> © 2022 Reliance Digital. All Rights Reserved.</p>
-            
-            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+
+                <div id="bottom">
+                    <p>Disclaimer</p>
+                    <p>Product prices, offers and availability are subject to change from time to time. All prices are
+                        inclusive of taxes. Product colours & images are only for illustration and they may not exactly
+                        match with the actual product. Product specs are subject to change & may vary from actual
+                        product. While every care is taken to avoid inaccuracies in content, these are provided as is,
+                        without warranty of any kind.</p>
+
+                    <hr>
+                    <p> © 2022 Reliance Digital. All Rights Reserved.</p>
+
+                </div>
             </footer>
 
 
-</body>
+    </body>
+
 </html>
 <script>
-    let obj=JSON.parse(localStorage.getItem("product_details"));
-    let n=obj["title"];
-   document.querySelector("#title").innerText=n;
-   document.querySelector("#discription").innerText=obj["discription"];
-   document.querySelector("#deal").innerText="  ₹ "+obj["price"];
-   document.querySelector("#mrp").innerText="  ₹ "+(Number(obj["price"])+100);
-   document.querySelector("#save").innerText="You save "+Math.floor((100/(Number(obj["price"])+100))*100)+" %";
-  document.querySelector("#articleId").innerText="Article ID: "+Number( Math.floor((Math.random() * 12345678)+1234567));
-   document.getElementById("imgp").src=obj.avatar;
-    function check()
-    {
-        document.querySelector("#dot").innerText="*COD: not avilable"
+    let obj = JSON.parse(localStorage.getItem("product_details"));
+    let n = obj["title"];
+    document.querySelector("#imgp").src = obj.avatar;
+    document.querySelector("#title").innerText = n;
+    document.querySelector("#discription").innerText = obj["discription"];
+    document.querySelector("#deal").innerText = "  ₹ " + obj["price"];
+    document.querySelector("#mrp").innerText = "  ₹ " + (Number(obj["price"]) + 100);
+    document.querySelector("#save").innerText = "You save " + Math.floor((100 / (Number(obj["price"]) + 100)) * 100) + " %";
+    document.querySelector("#articleId").innerText = "Article ID: " + Number(Math.floor((Math.random() * 12345678) + 1234567));
+    function check() {
+        document.querySelector("#dot").innerText = "*COD: not avilable"
     }
-    document.querySelector("#line").innerText="Home > Products > "+obj["category"]+" >  "+obj["brand"]+"  >  "+obj["title"];
+    document.querySelector("#line").innerText = "Home > Products > " + obj["category"] + " >  " + obj["brand"] + "  >  " + obj["title"];
 </script>
