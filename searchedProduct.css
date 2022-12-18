@@ -1,12 +1,30 @@
 #subcontainer {
-  padding: 40px 0px;
+  padding: 40px 0px ;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 2%;
   width: 95%;
   margin: auto;
-  height: auto;
-  overflow: scroll;
+  overflow-y: scroll;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #5d0ff8; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(231, 23, 23); 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(74, 74, 70); 
 }
 
 #subcontainer > div {
