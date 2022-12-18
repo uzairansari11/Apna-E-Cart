@@ -97,3 +97,43 @@ async function searchedData(searchedInput) {
   sessionStorage.setItem("searchedData", JSON.stringify(renderedData));
   window.location.href = "searchedProduct.html";
 }
+
+
+// render products script........
+
+
+function displayWatch() {
+  let key = "Watch";
+  localStorage.setItem("render_key",key);
+  window.location.href = "api_render.html";
+}
+
+function displayTv() {
+  let key = "Tv";
+  localStorage.setItem("render_key",key);
+  window.location.href = "api_render.html";
+}
+
+function displayHeadphone() {
+  let key = "Headphone";
+  localStorage.setItem("render_key",key);
+  window.location.href = "api_render.html";
+}
+
+function displayMobile() {
+  let key = "Mobile";
+  localStorage.setItem("render_key",key);
+  window.location.href = "api_render.html";
+}
+
+function displayLaptop() {
+  let key = "Laptop";
+  localStorage.setItem("render_key",key);
+  window.location.href = "api_render.html";
+}
+
+function displayCamera() {
+  let key = "Camera";
+  localStorage.setItem("render_key",key);
+  window.location.href = "api_render.html";
+}
