@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apna E-store | cart</title>
-    <link rel="icon" type="image/x-icon" href="image\logoFooter.jpg">
+    <title>Document</title>
     <style>
-        * {
+          * {
             font-family: Roboto, "system-ui", sans-serif;
         }
            /* ------------------Navigation bar start -------------------*/
@@ -33,6 +31,7 @@
   font-family: Roboto, "system-ui", sans-serif;
   font-size: 12px;
   font-weight: 600;
+  margin-bottom: 50px;
 }
 
 #searchBar input[type="text"] {
@@ -194,149 +193,60 @@ hr {
 }
 
 /* ------------------footer end-------------------*/
-
-        #cont {
-            width: 100%;
+        #cont{
+          
+            width: 90%;
             display: flex;
-            justify-content: space-evenly;
-            margin-top: 30px;
+            margin: auto;
+            justify-content: space-between;
         }
-
-        #cl {
-            width: 60%;
-            /* border: 1px solid red; */
-           
+        #cont>div{
+            width: 42%;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            padding-right: 15px;
+            padding-left: 15px;
+            padding-bottom: 30px;
+            text-align: center;
         }
-
-        #cr {
-            width: 26%;
-        }
-
-        #checkout {
-            width: 100%;
-            background-color: #e42529;
-            height: 40px;
-            border: 0px;
-            border-radius: 3px;
-            color: white;
-            font-size: larger;
-            font-weight: bold;
-
-        }
-
-        #checkout:hover {
-            cursor: pointer;
-            background-color: #003380;
-        }
-
-        #crbody {
-            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-            height: 300px;
-            width: 95%;
-            margin-top: 15px;
-            padding-left: 10px;
-            padding-right: 10px;
-            padding-top: 10px;
-        }
-
-        #crbody>div {
-
-            height: 17%;
-            width: 100%;
-            margin-top: 5px;
-        }
-
-        #input {
-            width: 250px;
+        #cont>div>input{
+            width: 90%;
             height: 30px;
-            border: 1px solid rgb(93, 146, 239);
-            border-radius: 4px;
-            color: rgb(93, 146, 239);
+            margin-bottom: 10px;
+            
         }
-
-        #check {
-            width: 100px;
-            height: 34px;
-            background-color: white;
-            border: 1px solid rgb(93, 146, 239);
-            font-weight: bold;
-            color: rgb(93, 146, 239);
-            border-radius: 4px;
-        }
-
-        #check:hover {
-            background-color: rgb(93, 146, 239);
-            color: white;
-            cursor: pointer;
-        }
-
-        .p {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .pp {
-            font-weight: bold;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        #cl>div {
-            /* border: 1px solid red; */
-            height: 230px;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-           padding-right: 30px;
-        }
-
-        #cl>div>div:nth-child(1) {
-            /* border: 1px solid black; */
-            width: 18%;
-        }
-
-        #cl>div>div:nth-child(2) {
-            /* border: 1px solid black; */
-            width: 46%;
-        }
-
-        #cl>div>div:nth-child(3) {
-            /* border: 1px solid black; */
-            width: 30%;
-            text-align: right;
-        }
-
-        #cl>div>div:nth-child(1)>img {
-            width: 100%;
-            margin-top: 35px;
-        }
-         #cl>div>div:nth-child(1)>img:hover{
-            cursor: pointer;
-        }
-      #cl>div>div:nth-child(2)>button:hover{
-            cursor: pointer;
-            background-color: #003380;
+        
+        #cont>div>button{
+            width: 40%;
+            height: 40px;
+            border-radius: 10px;
             border: 0px;
+            background-color: #e42529;
+            color: white;
+            font-weight: bold;
+            font-size: larger;
         }
-        #cl>div>div:nth-child(2)>input{
-            width: 30px;
-        }
-        #cl>div>div:nth-child(2)>h3:hover{
+        #cont>div>button:hover{
+            background-color: rgba(50, 63, 94, 0.319);
             cursor: pointer;
         }
-        #line {
-            border-bottom: 1px solid gray;
+        #im{
+            width: 200px;
+            height: 50px;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+        #im>img{
             width: 100%;
-            height: 25px;
-            /* font-size: smaller; */
+            height: 100%;
+        }
+        #price{
+            font-size: large;
+            font-weight: bold;
         }
     </style>
 </head>
-
 <body>
-        <!-- navbar start -->
+            <!-- navbar start -->
     
 <body id="top" >
     <div id="container">
@@ -371,40 +281,31 @@ hr {
 
 
         <!-- Nav End -->
-
-
-        <div id="line"></div>
     <div id="cont">
-        <div id="cl"></div>
-        <div id="cr">
-
-            <button id="checkout" onclick="ch()">CHECKOUT</button>
-            <div id="crbody">
-                <div>
-                    <input type="text" placeholder="COUPON CODE" id="input">
-                    <button id="check" onclick="coupon()">check </button>
-                    <hr>
-                </div>
-                <p class="pp" id="pd">PRICE DETAILS</p>
-                <Div class="p">
-                    <p>price</p>
-                    <p class="price"></p>
-                </Div>
-                <Div class="p">
-                    <p>Delivery Charges</p>
-                    <p>FREE</p>
-                </Div>
-                <hr>
-                <Div class="pp">
-                    <p>AMOUNT PAYABLE</p>
-                    <p id="rice"></p>
-                </Div>
-            </div>
+        <div>
+            <h1>Delivery Address</h1>
+            <input type="text" placeholder="Floor / House No">
+            <br>
+            <input type="text" placeholder="Street"> <br>
+            <input type="text" placeholder="City"> <br>
+            <input type="text" placeholder="District"> <br>
+            <input type="text" placeholder="State"><br>
+            <button>Submit</button>
+        </div>
+        <div>
+            <h1>Payment Method  </h1>
+            <div id="im"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/UPI-Logo-vector.svg/1280px-UPI-Logo-vector.svg.png" alt=""></div>
+            <input type="text" name="" id="" placeholder="ENTER UPI ID">
+            <input type="text" placeholder="ENTER OTP">
+            <input type="text" id="price">
+            <button onclick="place()">PLACE ORDER</button>
 
         </div>
+
     </div>
 
 
+    
   <!-- footer start -->
 
   <footer>
@@ -531,115 +432,13 @@ hr {
     
     </div>
     </footer>
-    
 </body>
-
 </html>
 <script>
-    let data = JSON.parse(localStorage.getItem("apan_e-store_cartproduct"));
-    let total=data.reduce(function(acc,ele){
-    return acc+Number(ele.price);
-},0);
-document.querySelector("#rice").innerText="₹" +total;
-document.querySelector(".price").innerText="₹" +total;
-display(data);
-    function display(data) {
-        console.log(data);
-        for (let i = 0; i < data.length; i++) {
-            let d = document.createElement("div");
-            let d1 = document.createElement("div");
-            let img = document.createElement("img");
-            img.src = data[i].avatar;
-           
-            d1.append(img);
-            d1.style.hover
-            d1.addEventListener("click", function () {
-                localStorage.setItem("product_details", JSON.stringify(data[i]))
-                window.location.href="product.html"
-            });
-            let d2 = document.createElement("div");
-            let h3 = document.createElement("h3");
-            h3.innerText = data[i].title;
-            let p1 = document.createElement("p");
-            let aa=Math.floor(Math.random() * 1234567) + 123456;
-            p1.innerText = "Product Id: "+aa;
-            p1.style.fontWeight="bold";
-            p1.style.color="grey";
-            let count=1;
-            let b1=document.createElement("button");
-            b1.innerText="-";
-            
-            let inp=document.createElement("input");
-            inp.style.textAlign="center";
-            inp.value=count;
-            let b2=document.createElement("button");
-            b2.innerText="+";
-            let pri=data[i].price;
-            let h2 = document.createElement("h2");
-             h2.innerText ="₹"+ pri;
-             let p2 = document.createElement("p");
-            p2.innerText = "MRP ₹"+(Number(data[i].price)+100);
-            b1.addEventListener("click",function(){
-                if(count>1)
-                {
-                    count--;
-                inp.value=count;
-                pri=Number(data[i].price)*count;
-                h2.innerText ="₹"+ pri;
-                p2.innerText = "MRP ₹"+(Number(data[i].price)+100)*count;
-                total=total-Number(data[i].price);
-                document.querySelector("#rice").innerText="₹" +total;
-                 document.querySelector(".price").innerText="₹" +total;
-
-                }
-            })
-            b2.addEventListener("click",function(){
-                count++;
-                inp.value=count;
-                
-                h2.innerText ="₹"+Number(data[i].price)*count;
-                p2.innerText = "MRP ₹"+(Number(data[i].price)+100)*count;
-                
-                total=total+Number(data[i].price);
-                console.log(total);
-                document.querySelector("#rice").innerText="₹" +total;
-                 document.querySelector(".price").innerText="₹" +total;
-            })
-            
-            d2.append(h3, p1,b1,inp,b2);
-            let d3 = document.createElement("div");
-            
-            h2.style.color="#003380";
-           
-            p2.style.textDecoration="line-through"
-            let p4 = document.createElement("p");
-            p4.innerText = "Free Shipping";
-            p4.style.color="#008000";
-            p4.style.fontWeight="bold";
-            let p5 = document.createElement("p");
-            p5.innerText = "*Delivery assurance is subject to our delivery locations staying open as per govt. regulations";
-            p5.style.fontSize = "small";
-            d3.append(h2, p2, p4, p5);
-            d.append(d1, d2, d3);
-            document.querySelector("#cl").append(d);
-            h3.addEventListener("click", function () {
-                localStorage.setItem("product_details", JSON.stringify(data[i]))
-                window.location.href="product.html"
-            });
-        }
+    let am=localStorage.getItem("amount");
+    document.querySelector("#price").value=am;
+    function place(){
+        alert("Order Placed");
+        window.location.href="index.html";
     }
-    function coupon()
-    {
-        alert("INVALID COUPON ");
-    }
-    document.querySelector("#line").innerText = "APNA E-STORE:      Home > Products > Cart"; 
-
-
-    function ch()
-    {
-        let am=document.querySelector("#rice").innerText;
-        localStorage.setItem("amount",am);
-        window.location.href="payment.html";
-    }
-
 </script>
