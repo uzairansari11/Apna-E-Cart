@@ -5,15 +5,15 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #5d0ff8; 
+  background: #003380;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(231, 23, 23); 
+  background: rgb(231, 23, 23);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(74, 74, 70); 
+  background: rgb(74, 74, 70);
 }
