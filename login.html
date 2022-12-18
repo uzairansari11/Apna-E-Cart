@@ -227,18 +227,51 @@
 </body>
 </html>
 <script>
+    let url="https://639dafef1ec9c6657baff83c.mockapi.io/users";
+    let no=document.querySelector("#mob").value;
+    let data;
+    get();
+    async function  get(){
+      try{
+        let res= await fetch(url);
+        let out= await res.json();
+        data=out;
+        
+       
+      }
+      catch(err)
+        {
+          alert(err);
+        }
+    }
+
+  
+   
     function my(){
         let no=document.querySelector("#mob").value;
+        let f=true;
+        for(let i=0;i<data.length;i++)
+        {
+            if(data[i].mobile==no)
+            {
+                    f=false;
+                    localStorage.setItem("fName",data[i].firstname);
+                    localStorage.setItem("adminData",JSON.stringify(data[i]));
+                window.location.href = "./admin_Side/admin.html"
+            }
+        }
         let storedNo = localStorage.getItem("num");
-
+        if(f){
         if(storedNo==no)
         {
-            window.location.href=""; 
+            window.location.href="index.html"; 
         }
         else{
-            let no=document.querySelector("#mob").value;
+            
+            
             localStorage.setItem("num",no);
            window.location.href="register.html"; 
         }
+    }
     }
 </script>
