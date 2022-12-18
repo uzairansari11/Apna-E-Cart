@@ -85,7 +85,7 @@
                 <div class="box">
                     <div class="right-side">
                         <div class="box-topic">Total Items</div>
-                        <div class="number">47</div>
+                        <div class="number" id="totalApicount" >0</div>
                         <div class="indicator">
                             <i class='bx bx-up-arrow-alt'></i>
                             <span class="text">Up from yesterday</span>
@@ -200,6 +200,31 @@
             document.querySelector(".sales-details").append(div);
 
         }
+
+
+ async function countData() {
+        try {
+          let api_data = await fetch(
+            "https://63996f3916b0fdad773c979e.mockapi.io/products",
+            {
+              method: "GET",
+              headers: {
+                "Content-Type": "application/json",
+              },
+            }
+          );
+// .headers.get( "X-Total-Count" )
+let data = await api_data.json();
+document.getElementById("totalApicount").innerText=data.length
+console.log(data.length)
+          
+        } catch (error) {
+          alert("Can't able to fetch Details of Admin");
+        }
+      }
+      countData();
+
+
     </script>
 
 </body>

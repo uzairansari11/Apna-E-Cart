@@ -26,7 +26,7 @@ function slides() {
     i = 0;
   }
 }
-setInterval(slides, 3000);
+setInterval(slides, 2000);
 
 // --------------------------------------------------------second slider banner starts js -------------------------------------------------
 
