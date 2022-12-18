@@ -1,4 +1,7 @@
+
+let searchedInput = document.getElementById("searchInput");
 let data = JSON.parse(sessionStorage.getItem("searchedData"));
+
 let cartItems =
   JSON.parse(localStorage.getItem("apan_e-store_cartproduct")) || [];
 if (data.length == 0) {
@@ -15,8 +18,8 @@ if (data.length == 0) {
       let img = document.createElement("img");
       img.setAttribute("src", element.avatar);
       img.addEventListener("click", function () {
-        localStorage.setItem("product_details", JSON.stringify(element))
-        window.location.href = "product.html"
+        localStorage.setItem("product_details", JSON.stringify(element));
+        window.location.href = "product.html";
       });
       let discription = document.createElement("p");
       let str = element.discription;
@@ -48,7 +51,7 @@ if (data.length == 0) {
   displayCards(data);
 }
 
-let searchedInput = document.getElementById("searchInput");
+
 
 let serachBtn = document.querySelector("#searchBar form");
 serachBtn.addEventListener("submit", (event) => {

@@ -7,25 +7,7 @@
   margin: auto;
   overflow-y: scroll;
 }
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: #5d0ff8; 
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgb(231, 23, 23); 
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(74, 74, 70); 
-}
 
 #subcontainer > div {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
