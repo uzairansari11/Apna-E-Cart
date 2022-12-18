@@ -230,7 +230,7 @@
             <div id="sort_and_render">
                 <div id="sorting_div">
                     <div>
-                        <h1>Latest <span>Laptop</span>'s :-</h1>
+                        <h1>Latest <span id="product_cat"></span>'s :-</h1>
                     </div>
                     <div>
                         <label for="">Sort By:</label>
@@ -413,7 +413,9 @@
     FetchedAllData();
 
     // selecting category type data and filtering...
-    let checked_category = "Mobile";
+    let checked_category = localStorage.getItem("render_key");
+    document.querySelector("#product_cat").innerText = checked_category;
+    console.log(checked_category);
     let category_checkbox = document.querySelectorAll("#category>div>p");
     let data_according_category = [];
     let bag = ""
@@ -498,13 +500,13 @@
         container.innerHTML = "";
         data.forEach(element => {
             let div = document.createElement("div");
-            div.addEventListener("click", function () {
-                localStorage.setItem("product_details", JSON.stringify(element))
-                window.location.href="product.html"
-            });
 
             let img = document.createElement("img");
             img.setAttribute("src", element.avatar);
+            img.addEventListener("click", function () {
+                localStorage.setItem("product_details", JSON.stringify(element))
+                window.location.href="product.html"
+            });
             let discription = document.createElement("p");
             let str = element.discription
             discription.innerText = `${str.substring(0, 50)}...`;
