@@ -286,6 +286,7 @@
                             <div></div><img src="image\cart.png" alt="cart">Cart
                         </a>
                         <a href="login.html" id="user_name"><img src="image\account.png" alt="user">Login</a>
+                         <button id="logout_btn"  style="display: none" >Logout</button>
                     </div>
                 </div>
             </div>
@@ -505,9 +506,22 @@
     }
     document.querySelector("#line").innerText = "Home > Products > " + obj["category"] + " >  " + obj["brand"] + "  >  " + obj["title"];
    
+ 
     let user_login = localStorage.getItem("user_login") || false;
     if (user_login) {
-        let a = localStorage.getItem("fName");
+        let a = localStorage.getItem("fName")||localStorage.getItem("againName");
         document.querySelector("#user_name").innerText = "Hi, " + a;
+document.getElementById("logout_btn").style.display="flex"
     }
+
+    let user_logout = document.getElementById("logout_btn");
+    user_logout.addEventListener("click",()=>{
+        localStorage.removeItem("user_login");
+        localStorage.removeItem("fName");
+         document.querySelector("#user_name").innerText = localStorage.getItem("loginIcon");
+        document.getElementById("logout_btn").style.display="none"
+        document.querySelector("#user_name").innerHTML = `<img src="./image/account.png"}>Login`
+         window.location.href="index.html"
+    });
+
 </script>
