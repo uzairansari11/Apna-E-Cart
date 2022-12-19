@@ -43,7 +43,8 @@
                     <a href="cart.html">
                         <div></div><img src="image\cart.png" alt="cart">Cart
                     </a>
-                    <a href="login.html" id="name"><img src="image\account.png" alt="user">Login</a>
+                    <a href="login.html" id="user_name"><img src="image\account.png" alt="user">Login</a>
+                    <button id="logout_btn">Logout</button>
                 </div>
             </div>
             <div class="dropdown_cat" style="margin-top: 60px; ">
@@ -433,7 +434,7 @@
         <!--------------------------- 1st-slider bar start for Banner ---------------->
 
 
-        <div class="slider" style="margin-top:3;">
+        <div class="slider" style="margin-top:2.7%;">
             <a id="prev">&#10094</a>
             <img id="image" src="sliderimage\1.webp" alt="image">
             <a id="next">&#10095</a>
@@ -1391,11 +1392,19 @@
     });
 
 
+    let user_login = localStorage.getItem("user_login") || false;
+    if (user_login) {
+        let a = localStorage.getItem("fName");
+        document.querySelector("#user_name").innerText = "Hi, " + a;
+    }
 
-    let a = localStorage.getItem("fName");
-
-    document.querySelector("#name").innerText = "Hi, " + a;
-
+    let user_logout = document.getElementById("logout_btn");
+    // user_logout.addEventListener("click",()=>{
+    //     localStorage.removeItem("user_login");
+    //     localStorage.removeItem("fName");
+    //     document.getElementById("logout_btn").innerHTML = "";
+    //     document.querySelector("#user_name").innerHTML = `<img src="./image/account.png"}>Login`
+    // });
 
 
 </script>

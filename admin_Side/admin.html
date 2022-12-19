@@ -17,7 +17,7 @@
             <span class="logo_name">APNA E-STORE</span>
         </div>
         <ul class="nav-links">
-            <li  style="background-color: #081D45;">
+            <li style="background-color: #081D45;">
                 <a href="admin.html" class="active">
                     <i class='bx bx-grid-alt'></i>
                     <span class="links_name">Dashboard</span>
@@ -54,7 +54,7 @@
                 </a>
             </li>
             <li class="log_out">
-                <a href="/index.html">
+                <a href="C:\Users\hp\Desktop\-wanting-advertisement-5951\index.html">
                     <i class='bx bx-log-out'></i>
                     <span class="links_name">Log out </span>
                 </a>
@@ -72,9 +72,9 @@
                 <i class='bx bx-search'></i>
             </div> -->
             <div class="profile-details">
-                <img src="images/profile.jpg" alt="">
+                <img id="img_nav" src="" alt="">
                 <!-- admin name -->
-                <span class="admin_name">Hey Himanshu</span>
+                <span class="admin_name">Hey <span id="admin_name"></span></span>
                 <i class='bx bx-chevron-down'></i>
             </div>
         </nav>
@@ -84,7 +84,7 @@
                 <div class="box">
                     <div class="right-side">
                         <div class="box-topic">Total Items</div>
-                        <div class="number" id="totalApicount" >0</div>
+                        <div class="number" id="totalApicount">0</div>
                         <div class="indicator">
                             <i class='bx bx-up-arrow-alt'></i>
                             <span class="text">Up from yesterday</span>
@@ -130,7 +130,7 @@
             <div class="sales-boxes">
                 <div class="recent-sales box">
                     <div class="title">Admin Details :-</div>
-                    <div class="sales-details" >
+                    <div class="sales-details">
                         <!-- Fetch Admin Details -->
                     </div>
                 </div>
@@ -160,36 +160,43 @@
         }
 
         let admin_details = document.querySelector(".sales-details");
-        async function Fetch_admin() {
-            try {
-                let api_data = await fetch("https://639dafef1ec9c6657baff83c.mockapi.io/users", {
-                    method: "GET",
-                    headers: {
-                        "Content-Type": "application/json"
-                    }
-                });
-                let data = await api_data.json();
-                displayCards(data[0]);
-            } catch (error) {
-                alert("Can't able to fetch Details of Admin")
-            }
-        }
-        Fetch_admin();
-
-
-        function displayCards(data) {
+        // async function Fetch_admin() {
+        //     try {
+        //         let api_data = await fetch("https://639dafef1ec9c6657baff83c.mockapi.io/users", {
+        //             method: "GET",
+        //             headers: {
+        //                 "Content-Type": "application/json"
+        //             }
+        //         });
+        //         let data = await api_data.json();
+        //         displayCards(data[0]);
+        //     } catch (error) {
+        //         alert("Can't able to fetch Details of Admin")
+        //     }
+        // }
+        // Fetch_admin();
+        // let Admin_data = JSON.parse(localStorage.getItem("admin_data"));
+        // displayCards(Admin_data);
+        document.querySelector("#admin_name").innerText = localStorage.getItem("admin_name")
+       
+            displayCards()
+        function displayCards() {
+            let data = JSON.parse(localStorage.getItem("admin_data"));
             let admin_details = document.querySelector(".sales-details");
-            admin_details.innerHTML = "";
+            document.querySelector("#admin_name").innerText = localStorage.getItem("admin_name")
+            document.querySelector("#img_nav").setAttribute("src", data.usertype);
+                admin_details.innerHTML = "";
 
             let div = document.createElement("div");
 
             let img = document.createElement("img");
-            img.setAttribute("src", data.image);
-
+            img.setAttribute("src", data.usertype);
+            img.style.width = "30%";
+            img.style.borderRadius = "20px";
             let div1 = document.createElement("div");
 
             let Name = document.createElement("h4");
-            Name.innerText = "Name:- " + data.firstname +" "+ data.lastname;
+            Name.innerText = "Name:- " + data.firstname + " " + data.lastname;
             let email = document.createElement("p");
             email.innerText = "Email:- " + data.email;
             let mobNo = document.createElement("p");
@@ -201,31 +208,30 @@
         }
 
 
- async function countData() {
-        try {
-          let api_data = await fetch(
-            "https://63996f3916b0fdad773c979e.mockapi.io/products",
-            {
-              method: "GET",
-              headers: {
-                "Content-Type": "application/json",
-              },
-            }
-          );
-// .headers.get( "X-Total-Count" )
-let data = await api_data.json();
-document.getElementById("totalApicount").innerText=data.length;
-document.getElementById("NewlyAdd").innerText=localStorage.getItem("count");
-document.getElementById("TotalEdited").innerText=localStorage.getItem("editcount") ;
-document.getElementById("TotalDelete").innerText=localStorage.getItem("deletecount");
+        async function countData() {
+            try {
+                let api_data = await fetch(
+                    "https://63996f3916b0fdad773c979e.mockapi.io/products",
+                    {
+                        method: "GET",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                    }
+                );
+                // .headers.get( "X-Total-Count" )
+                let data = await api_data.json();
+                document.getElementById("totalApicount").innerText = data.length;
+                document.getElementById("NewlyAdd").innerText = localStorage.getItem("count");
+                document.getElementById("TotalEdited").innerText = localStorage.getItem("editcount");
+                document.getElementById("TotalDelete").innerText = localStorage.getItem("deletecount");
 
-console.log(data.length)
-          
-        } catch (error) {
-          alert("Can't able to fetch Details of Admin");
+
+            } catch (error) {
+                alert("Can't able to fetch Details of Admin");
+            }
         }
-      }
-      countData();
+        countData();
 
 
     </script>

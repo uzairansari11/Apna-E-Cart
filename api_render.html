@@ -151,7 +151,7 @@
                     <a href="cart.html">
                         <div></div><img src="image\cart.png" alt="cart">Cart
                     </a>
-                    <a href="login.html"><img src="image\account.png" alt="user">Login</a>
+                    <a href="login.html" id="user_name"><img src="image\account.png" alt="user">Login</a>
                 </div>
             </div>
             <div class="dropdown_cat" style="margin-top: 60px; ">
@@ -949,6 +949,12 @@
             let sortedData = bag.sort((a, b) => b.price - a.price);
             displayCards(sortedData);
         }
+    }
+
+    let user_login = localStorage.getItem("user_login") || false;
+    if (user_login) {
+        let a = localStorage.getItem("fName");
+        document.querySelector("#user_name").innerText = "Hi, " + a;
     }
 
 </script>
