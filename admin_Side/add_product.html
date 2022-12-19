@@ -56,7 +56,7 @@
         </a>
       </li>
       <li class="log_out">
-        <a href="#">
+        <a href="/index.html">
           <i class='bx bx-log-out'></i>
           <span class="links_name">Log out</span>
         </a>
@@ -75,11 +75,11 @@
                 <i class='bx bx-search'></i>
             </div> -->
       <div class="profile-details">
-        <img src="images/profile.jpg" alt="" />
-        <!-- admin name -->
-        <span class="admin_name">Hey Himanshu</span>
-        <i class="bx bx-chevron-down"></i>
-      </div>
+                <img id="img_nav" src="" alt="">
+                <!-- admin name -->
+                <span class="admin_name">Hey <span id="admin_name"></span></span>
+                <i class='bx bx-chevron-down'></i>
+            </div>
     </nav>
 
     <div class="home-content">
@@ -118,6 +118,15 @@
   </section>
 
   <script>
+
+
+
+ let data = JSON.parse(localStorage.getItem("admin_data"));
+       
+            document.querySelector("#admin_name").innerText = localStorage.getItem("admin_name")
+            document.querySelector("#img_nav").setAttribute("src", data.usertype);
+
+
     let sidebar = document.querySelector(".sidebar");
     let sidebarBtn = document.querySelector(".sidebarBtn");
     sidebarBtn.onclick = function () {

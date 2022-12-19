@@ -256,7 +256,10 @@
         let fName = document.querySelector("#f").value;
         let email = document.querySelector("#mail").value;
         localStorage.setItem("fName", fName);
+          localStorage.setItem("againName", fName);
         localStorage.setItem("email", email);
+        localStorage.setItem("loginIcon","Login")
+        localStorage.setItem("logoutIcon","Logout")
         alert("login successful");
         localStorage.setItem("user_login",true);
         window.location.href = "index.html";
